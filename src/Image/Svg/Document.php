@@ -9,6 +9,6 @@ class Document extends SvgDocument
     public function __construct()
     {
         $this->attributes = [];
-        parent::construct();
+        parent::__construct();
     }
 }
