@@ -15,6 +15,7 @@
  * @license Public Domain http://creativecommons.org/licenses/publicdomain/
  * @package Cpdf
  */
+use Dompdf\Image\Svg\Document as SvgDocument;
 use FontLib\Font;
 use FontLib\BinaryStream;
 
@@ -5037,7 +5038,7 @@ EOT;
      */
     function addSvgFromFile($file, $x, $y, $w = 0, $h = 0)
     {
-        $doc = new \Svg\Document();
+        $doc = new SvgDocument();
         $doc->loadFile($file);
         $dimensions = $doc->getDimensions();
 
